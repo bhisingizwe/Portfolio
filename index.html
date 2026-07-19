@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Bénitha Isingizwe, an Information Technology graduate focused on Technical Support, QA, and Solutions Engineering."
+  />
+
+  <title>Bénitha Isingizwe | Technical Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#top" aria-label="Bénitha Isingizwe home">
+        Bénitha<span>.</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+        <!-- TODO: Replace # with your real resume file path, such as assets/resume.pdf -->
+        <a class="nav-resume" href="#" data-placeholder-link>Résumé</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <p class="eyebrow">// technical support · QA · solutions engineering</p>
+
+      <div class="hero-grid">
+        <div>
+          <h1 id="hero-title">
+            I build, test, troubleshoot, and explain
+            <em>technical products.</em>
+          </h1>
+        </div>
+
+        <div class="hero-copy">
+          <p>
+            I’m Bénitha, an Information Technology graduate who enjoys turning unclear
+            problems into usable systems, investigating why something is not working,
+            and communicating solutions in a way people can actually understand.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">View selected work</a>
+            <a class="text-link" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="availability-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        Open to Technical Support, QA, and Solutions Engineering opportunities
+      </div>
+    </section>
+
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-heading">
+          <p class="section-label">-- 01 selected work</p>
+          <h2 id="work-title">Projects that show how I think.</h2>
+        </div>
+
+        <article class="case-study" aria-labelledby="alignn-title">
+          <div class="case-study-intro">
+            <div>
+              <p class="project-kicker">Independent product · 2025–present</p>
+              <h3 id="alignn-title">𝒜lignn</h3>
+            </div>
+
+            <div class="project-summary">
+              <p>
+                A full-stack wellness platform connecting mental wellness, physical
+                wellness, nutrition, recovery, and personalized support in one product.
+              </p>
+
+              <ul class="tech-list" aria-label="Alignn technologies">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Supabase</li>
+                <li>Vercel</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="case-study-body">
+            <section class="case-block">
+              <p class="code-label">// problem</p>
+              <p class="case-lead">
+                Built from firsthand experience with how inaccessible affordable mental
+                health support can be, and from discovering how much physical movement
+                can support emotional wellbeing — I wanted to build something that treats
+                mind and body as connected, not separate.
+              </p>
+            </section>
+
+            <section class="case-block">
+              <p class="code-label">// research &amp; iteration</p>
+
+              <!--
+                IMPORTANT:
+                Replace the paragraph below with your exact existing research & iteration
+                copy if it differs. The original index.html was not attached, so I could
+                not preserve unseen wording verbatim.
+              -->
+              <p>
+                Early versions used individualized image and video backgrounds across
+                different pages. Feedback revealed that the changing visuals could make
+                the experience feel more emotionally intense and less cohesive than
+                intended. I used that feedback to move toward a unified light-blue visual
+                system, calmer surfaces, clearer hierarchy, and more consistent navigation.
+              </p>
+
+              <p>
+                The redesign process reinforced that interface choices are not only
+                decorative: color, density, consistency, and language influence how a
+                user interprets the purpose and emotional tone of a product.
+              </p>
+
+              <!--
+                BEFORE/AFTER PLACEMENT:
+                Add the comparison immediately here, after the iteration explanation and
+                before architecture. This lets the reader understand the decision first,
+                then see visual evidence of the change.
+              -->
+              <figure class="comparison" aria-labelledby="comparison-caption">
+  <div class="comparison-grid">
+
+    <div class="comparison-item">
+      <div class="comparison-image-wrapper">
+        <img
+          src="assets/alignn-before.jpg"
+          alt="Earlier Alignn dashboard using an individualized nature background and purple interface"
+          class="comparison-image"
+        />
+      </div>
+
+      <div class="comparison-description">
+        <span class="comparison-tag">Before</span>
+        <p>
+          Individualized backgrounds created a visually expressive experience,
+          but the changing imagery made the product feel less consistent and
+          more emotionally intense than intended.
+        </p>
+      </div>
+    </div>
+
+    <div class="comparison-item">
+      <div class="comparison-image-wrapper">
+        <img
+          src="assets/alignn-after.jpg"
+          alt="Redesigned Alignn dashboard using a unified light-blue interface"
+          class="comparison-image"
+        />
+      </div>
+
+      <div class="comparison-description">
+        <span class="comparison-tag">After</span>
+        <p>
+          A unified light-blue system created a calmer experience, clearer
+          hierarchy, more consistent navigation, and a stronger connection
+          between each area of the platform.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <figcaption id="comparison-caption">
+    Alignn dashboard redesign: moving from individualized page backgrounds to
+    a calmer and more consistent product system.
+  </figcaption>
+</figure>
+</section>
+
+            <section class="case-block">
+              <p class="code-label">// architecture</p>
+              <p>
+                The production data model currently contains
+                <strong>13 tables, 94 columns, and 7 foreign-key relationships</strong>.
+                Supabase supports authentication, session handling, protected user access,
+                and database integration, while the front end is built with HTML, CSS, and
+                JavaScript and deployed through Vercel.
+              </p>
+
+              <p>
+                Phase 1 included registration, login, logout, forgot-password and reset
+                flows, token and session handling, protected routes, profile updates,
+                account management, a personalized dashboard, activity history, mood
+                tracking, journaling and reflection tools, fitness and nutrition resources,
+                recovery content, educational videos, responsive layouts, and improved
+                navigation.
+              </p>
+            </section>
+
+            <section class="case-block">
+              <p class="code-label">// what I learned</p>
+              <p>
+                Building Alignn required learning while shipping: debugging authentication,
+                working through deployment and caching issues, organizing a large amount of
+                educational content, and continuously deciding what should be built now
+                versus later. It strengthened my technical troubleshooting, product
+                judgment, and ability to translate feedback into concrete interface changes.
+              </p>
+            </section>
+          </div>
+
+          <div class="project-links">
+            <a
+              class="button button-secondary"
+              href="https://alignn-app.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View live product <span aria-hidden="true">↗</span>
+            </a>
+
+            <!-- TODO: Replace # with the real Alignn GitHub repository URL -->
+            <a class="text-link" href="https://alignn-app.vercel.app/" data-placeholder-link>
+              View repository <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-card-top">
+              <p class="project-number">02</p>
+              <p class="project-type">Team research project</p>
+            </div>
+
+            <h3>Traffic Sign Detection</h3>
+            <p>
+              A YOLOv11 object-detection project trained with synthetic GTA V imagery and
+              real-world traffic images to study detection across varied driving conditions.
+            </p>
+
+            <p class="contribution">
+              Collaborated within a team and personally contributed to dataset
+              preprocessing, image augmentation and label formatting, plus evaluation
+              using mean Average Precision across lighting, weather, occlusion, and
+              distance conditions.
+            </p>
+
+            <ul class="tech-list" aria-label="Traffic Sign Detection technologies">
+              <li>YOLOv11</li>
+              <li>Machine Learning</li>
+              <li>Data Preparation</li>
+              <li>Model Evaluation</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-top">
+              <p class="project-number">03</p>
+              <p class="project-type">Team database project</p>
+            </div>
+
+            <h3>UniFit</h3>
+            <p>
+              A fitness-tracking application concept supporting workout logging,
+              nutrition tracking, and biometric data management.
+            </p>
+
+            <p class="contribution">
+              Collaborated within a team and personally contributed to the initial product
+              concept, user-flow planning, relational database design, entity
+              relationships, and SQL schema structure.
+            </p>
+
+            <ul class="tech-list" aria-label="UniFit technologies">
+              <li>SQL</li>
+              <li>Relational Design</li>
+              <li>Data Modeling</li>
+              <li>User Flows</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="shell about-grid">
+        <div class="section-heading">
+          <p class="section-label">// about</p>
+          <h2 id="about-title">Technical curiosity, with a people-first lens.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            I studied Information Technology at North Carolina A&amp;T State University
+            and graduated in May 2026. I like understanding how a product works as a whole:
+            what the user sees, what the system is doing behind the interface, where a
+            process can break, and how to explain the fix without making the person asking
+            for help feel lost.
+          </p>
+
+          <p>
+            Outside of tech, I’ve been a soccer referee since 2019, officiating more than
+            50 matches in a typical season. Refereeing taught me how to observe carefully,
+            make decisions in real time, communicate clearly under pressure, and stay
+            composed when several people want different answers. In 2025, I received the
+            Young Referee of the Year award.
+          </p>
+
+          <p>
+            While redesigning Alignn, I realized that I’m especially energized by product
+            research, iteration, and understanding how design choices affect users. I
+            still value engineering and want to keep strengthening those skills, but I’m
+            most engaged when technical problem-solving connects directly to product
+            quality, user understanding, and a better overall experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-card">
+        <p class="section-label">$ contact</p>
+        <h2 id="contact-title">Let’s solve something useful.</h2>
+        <p>
+          I’m looking for opportunities where I can investigate problems, support users,
+          test product behavior, and help teams communicate technical solutions clearly.
+        </p>
+
+        <div class="contact-links">
+          <a class="button button-primary" href="mailto:benithaisingizwe@gmail.com">
+            Email me
+          </a>
+
+          <!-- TODO: Replace # with your real LinkedIn profile URL -->
+          <a class="text-link" href="https://www.linkedin.com/in/benitha-isingizwe-547442324" data-placeholder-link>
+            LinkedIn <span aria-hidden="true">↗</span>
+          </a>
+
+          <!-- TODO: Replace # with your real GitHub profile URL -->
+          <a class="text-link" href="#" data-placeholder-link>
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>Designed and built by Bénitha Isingizwe.</p>
+      <a href="#top" id="backToTop">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="placeholder-toast" role="status" aria-live="polite" hidden>
+    This link still needs your real URL or file.
+  </div>
+</body>
+</html>
