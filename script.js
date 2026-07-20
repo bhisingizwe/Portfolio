@@ -2,76 +2,71 @@
 // Portfolio JavaScript
 // ======================================
 
-// Sticky header shadow
 const header = document.querySelector(".site-header");
-
-window.addEventListener("scroll", () => {
-    if (!header) return;
-
-    if (window.scrollY > 15) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-});
-
-
-// Mobile Navigation
 const menuButton = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
-
-if (menuButton && nav) {
-
-    menuButton.addEventListener("click", () => {
-
-        nav.classList.toggle("active");
-
-        const expanded =
-            menuButton.getAttribute("aria-expanded") === "true";
-
-        menuButton.setAttribute(
-            "aria-expanded",
-            !expanded
-        );
-    });
-
-}
-
-
-// Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function (e) {
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (!target) return;
-
-        e.preventDefault();
-
-        target.scrollIntoView({
-            behavior: "smooth"
-        });
-
-        if (nav) {
-            nav.classList.remove("active");
-        }
-
-    });
-
-});
-
-
-// Current Year (for footer if you add one)
+const backToTop = document.getElementById("backToTop");
 const year = document.querySelector("#year");
 
-if (year) {
-    year.textContent = new Date().getFullYear();
+// Sticky header state
+function updateHeader() {
+  if (!header) return;
+
+  header.classList.toggle("is-scrolled", window.scrollY > 15);
 }
 
-// Back to top
-const backToTop = document.getElementById("backToTop");
+// Open and close mobile navigation
+function closeMenu() {
+  if (!menuButton || !nav) return;
 
+  nav.classList.remove("is-open");
+  document.body.classList.remove("menu-open");
+
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-label", "Open navigation");
+}
+
+function toggleMenu() {
+  if (!menuButton || !nav) return;
+
+  const isOpen = nav.classList.contains("is-open");
+
+  nav.classList.toggle("is-open", !isOpen);
+  document.body.classList.toggle("menu-open", !isOpen);
+
+  menuButton.setAttribute("aria-expanded", String(!isOpen));
+  menuButton.setAttribute(
+    "aria-label",
+    isOpen ? "Open navigation" : "Close navigation"
+  );
+}
+
+menuButton?.addEventListener("click", toggleMenu);
+
+// Smooth scrolling for internal links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    const href = anchor.getAttribute("href");
+
+    // Ignore unfinished placeholder links
+    if (!href || href === "#") return;
+
+    const target = document.querySelector(href);
+
+    if (!target) return;
+
+    event.preventDefault();
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    closeMenu();
+  });
+});
+
+// Back to top
 backToTop?.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -79,4 +74,32 @@ backToTop?.addEventListener("click", (event) => {
     top: 0,
     behavior: "smooth"
   });
+
+  closeMenu();
 });
+
+// Close the menu when Escape is pressed
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
+
+// Close mobile menu when switching back to desktop
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 640) {
+    closeMenu();
+  }
+});
+
+// Update header when scrolling
+window.addEventListener("scroll", updateHeader, {
+  passive: true
+});
+
+// Current year, only if you add an element with id="year"
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+updateHeader();
