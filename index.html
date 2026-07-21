@@ -47,7 +47,7 @@
         <a href="#contact">Contact</a>
 
         <!-- TODO: Replace # with your real resume file path, such as assets/resume.pdf -->
-        <a class="nav-resume" href="./resume/Benitha_Hyacintha_Isingizwe_Resume.pdf" data-placeholder-link>Résumé</a>
+        <a class="nav-resume" href="./resume/Benitha Hyacintha Isingizwe Resume.pdf" data-placeholder-link>Résumé</a>
       </nav>
     </div>
   </header>
@@ -90,7 +90,19 @@
           <h2 id="work-title">Projects that show how I think.</h2>
         </div>
 
-        <article class="case-study" aria-labelledby="alignn-title">
+        <nav class="project-jump-nav" aria-label="Jump to project">
+  <span class="project-jump-label">// jump to project</span>
+
+  <a href="#alignn-project">01 Alignn</a>
+  <span aria-hidden="true">·</span>
+
+  <a href="#traffic-sign-project">02 Traffic Sign Detection</a>
+  <span aria-hidden="true">·</span>
+
+  <a href="#unifit-project">03 UniFit</a>
+</nav>
+
+        <article class="case-study" id="alignn-project" aria-labelledby="alignn-title">
           <div class="case-study-intro">
             <div>
               <p class="project-kicker">Independent product · 2025–present</p>
@@ -109,6 +121,9 @@
                 <li>JavaScript</li>
                 <li>Supabase</li>
                 <li>Vercel</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
               </ul>
             </div>
           </div>
@@ -141,6 +156,13 @@
                 user interprets the purpose and emotional tone of a product.
               </p>
 
+              <p>
+                That experience reinforced something I hadn't expected:
+                watching real user feedback shape a product decision was
+                one of the most rewarding parts of the project. It sparked 
+                my interest in product research, usability, and iterative design.
+              </p>
+
               <!--
                 BEFORE/AFTER PLACEMENT:
                 Add the comparison immediately here, after the iteration explanation and
@@ -162,7 +184,7 @@
       <div class="comparison-description">
         <span class="comparison-tag">Before</span>
         <p>
-          SoulSpace's origibak dashboard — before the shift to a 
+          SoulSpace's original dashboard — before the shift to a 
           unified, calmer visual system.
         </p>
       </div>
@@ -206,14 +228,40 @@
                 JavaScript and deployed through Vercel.
               </p>
 
-              <p>
-                Phase 1 included registration, login, logout, forgot-password and reset
-                flows, token and session handling, protected routes, profile updates,
-                account management, a personalized dashboard, activity history, mood
-                tracking, journaling and reflection tools, fitness and nutrition resources,
-                recovery content, educational videos, responsive layouts, and improved
-                navigation.
-              </p>
+              <div class="feature-grid" aria-label="Phase 1 completed features">
+  <section class="feature-group">
+    <h3>Authentication</h3>
+    <ul>
+      <li>Registration and login</li>
+      <li>Password reset flow</li>
+      <li>Token and session handling</li>
+      <li>Protected routes</li>
+      <li>Logout and user-state management</li>
+    </ul>
+  </section>
+
+  <section class="feature-group">
+    <h3>Account &amp; Platform</h3>
+    <ul>
+      <li>Personalized dashboard</li>
+      <li>Profile updates</li>
+      <li>Account management</li>
+      <li>Activity history</li>
+      <li>Responsive navigation</li>
+    </ul>
+  </section>
+
+  <section class="feature-group">
+    <h3>Wellness Features</h3>
+    <ul>
+      <li>Mood tracking</li>
+      <li>Journaling and reflection</li>
+      <li>Fitness and nutrition resources</li>
+      <li>Recovery content</li>
+      <li>Educational videos</li>
+    </ul>
+  </section>
+</div>
             </section>
 
             <section class="case-block">
@@ -246,7 +294,7 @@
         </article>
 
         <div class="project-grid">
-          <article class="project-card">
+          <article class="project-card" id="traffic-sign-project">
             <div class="project-card-top">
               <p class="project-number">02</p>
               <p class="project-type">Team research project</p>
@@ -273,7 +321,7 @@
             </ul>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" id="unifit-project">
             <div class="project-card-top">
               <p class="project-number">03</p>
               <p class="project-type">Team database project</p>
